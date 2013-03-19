@@ -18,21 +18,23 @@
             <source src="shared/street.webm" type="video/webm">
         </video>
     </div>
-       <div class="hotspot" style="top:100px; left: 130px;">
-        #1
-    </div>
-       <div class="hotspot" style="top: 800px; right: 130px;">
-    #2
-    </div>
-       <div class="hotspot" style="top: 1000px; left: 130px;">
-        #3
-    </div>
-       <div class="hotspot" style="top: 1500px; left: 130px;">
-        #4
-    </div>
-       <div class="hotspot" style="top: 2100px; right: 130px;">
-        #5
-    </div>
+
+		<div class="hotspot" data-position="0" data-speed="1" style="left: 130px;">
+		    #1
+		</div>
+		<div class="hotspot" data-position="0.3" data-speed="2" style="right: 130px;">
+		    #2
+		</div>
+		<div class="hotspot" data-position="0.4" data-speed="1.5" style="left: 130px;">
+		    #3
+		</div>
+		<div class="hotspot" data-position="0.7" data-speed="0.7" style="left: 130px;">
+		    #4
+		</div>
+		<div class="hotspot" data-position="1" data-speed="3" style="right: 130px;">
+		    #5
+		</div>
+		
 </div>
 
 <script src="shared/js/jquery-1.6.js"></script>
@@ -72,6 +74,7 @@
 			function handleScroll() {
 				currentPosition = $win.scrollTop() / scrollHeight;
 				render( currentPosition );
+				console.log(currentPosition);
 			}
 
 
