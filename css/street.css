@@ -1,0 +1,27 @@
+body {
+	font-family: "Helvetica Neue", Helvetica, Arial;
+	font-weight: bold;
+	font-size: 200px;
+	color: white;
+}
+
+.street-view > img,
+.street-view > video {
+	width: 100%;
+	height: 100%;
+}
+
+h1 {
+	position: fixed;
+	z-index: 2;
+	font-size: 20px;
+	top: 10px;
+	left: 10px;
+}
+
+.hotspot {
+	position: absolute;
+	z-index: 1;
+	opacity: 0.8;
+	margin-top: -1ex;
+}
