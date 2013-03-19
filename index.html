@@ -39,8 +39,7 @@
 
 <script src="shared/js/jquery-1.6.js"></script>
 
-	<script>
-	
+<script>
 		$(document).ready(function(){
 			var $doc = $(document);
 			var $win = $(window);
@@ -51,9 +50,10 @@
 			var streetImgWidth = 1024, streetImgHeight = 640;
 			calculateDimensions();
 
-			var currentPosition = 0;
+			var currentPosition = -1, targetPosition = 0;
 			var $videoContainer = $('.street-view');
 			var video = $('.street-view > video')[0];
+			var $hotspotElements = $('[data-position]');
 
 
 			// handling resize and scroll events
@@ -71,11 +71,34 @@
 				handleScroll();
 			}
 			
+			// set the target position to the relative (0..1) scroll position
 			function handleScroll() {
-				currentPosition = $win.scrollTop() / scrollHeight;
-				render( currentPosition );
-				console.log(currentPosition);
+				targetPosition = $win.scrollTop() / scrollHeight;
 			}
+			
+			// main render loop
+			window.requestAnimFrame = (function(){
+			  return  window.requestAnimationFrame       ||
+			          window.webkitRequestAnimationFrame ||
+			          window.mozRequestAnimationFrame    ||
+			          window.oRequestAnimationFrame      ||
+			          window.msRequestAnimationFrame     ||
+			          function(/* function */ callback, /* DOMElement */ element){
+			            window.setTimeout(callback, 1000 / 60);
+			          };
+			})();
+
+			// on every loop: approximate current to target position
+			function animloop(){
+				if ( Math.floor(currentPosition*5000) != Math.floor(targetPosition*5000) ) {
+					currentPosition += (targetPosition - currentPosition) / 5;
+					render(currentPosition);
+				}
+			  requestAnimFrame(animloop);
+			}
+			animloop();
+
+			
 
 
 
@@ -84,22 +107,23 @@
 
 
 			function render( position ) {
-			    var minY = -windowHeight, maxY = windowHeight;
-			    $.each($hotspotElements,function(index,element){
-			        var $hotspot = $(element);
-			        var elemPosition = Number( $hotspot.attr('data-position') );
-			        var elemSpeed = Number( $hotspot.attr('data-speed') );
-			        var elemY = windowHeight/2 + elemSpeed * (elemPosition-position) * scrollHeight;
-			        if ( elemY < minY || elemY > maxY ) {
-			            $hotspot.css({'visiblity':'none', top: '-1000px','webkitTransform':'none'});
-			        } else {
-			            $hotspot.css({'visiblity':'visible', top: elemY, position: 'fixed'});
-			        }
-			    });
-			    renderVideo( position );
+				// position the elements
+				var minY = -windowHeight, maxY = windowHeight;
+				$.each($hotspotElements,function(index,element){
+					var $hotspot = $(element);
+					var elemPosition = Number( $hotspot.attr('data-position') );
+					var elemSpeed = Number( $hotspot.attr('data-speed') );
+					var elemY = windowHeight/2 + elemSpeed * (elemPosition-position) * scrollHeight;
+					if ( elemY < minY || elemY > maxY ) {
+						$hotspot.css({'visiblity':'none', top: '-1000px','webkitTransform':'none'});
+					} else {
+						$hotspot.css({'visiblity':'visible', top: elemY, position: 'fixed'});
+					}
+				});
+				
+				
+				renderVideo( position );
 			}
-			
-
 
 
 			function renderVideo(position) {
