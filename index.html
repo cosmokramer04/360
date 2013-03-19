@@ -84,8 +84,22 @@
 
 
 			function render( position ) {
-				renderVideo( position );
+			    var minY = -windowHeight, maxY = windowHeight;
+			    $.each($hotspotElements,function(index,element){
+			        var $hotspot = $(element);
+			        var elemPosition = Number( $hotspot.attr('data-position') );
+			        var elemSpeed = Number( $hotspot.attr('data-speed') );
+			        var elemY = windowHeight/2 + elemSpeed * (elemPosition-position) * scrollHeight;
+			        if ( elemY < minY || elemY > maxY ) {
+			            $hotspot.css({'visiblity':'none', top: '-1000px','webkitTransform':'none'});
+			        } else {
+			            $hotspot.css({'visiblity':'visible', top: elemY, position: 'fixed'});
+			        }
+			    });
+			    renderVideo( position );
 			}
+			
+
 
 
 			function renderVideo(position) {
