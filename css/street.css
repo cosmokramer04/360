@@ -212,7 +212,7 @@ a:visited {
   width: 100%;
   padding: 10px;
   text-transform: uppercase;
-  font-family: 'DinCondensedRegular', 'Trebuchet MS', 'Garamond';
+  font-family: 'Helvetica';
   padding-top: 20px;
 }
 .header h1 {
@@ -227,7 +227,7 @@ a:visited {
   display: block;
   width: 74px;
   height: 31px;
-  background: url(../images/shared/sf-logo-small.png) no-repeat;
+  background: url(../images/shared/ru-logo-small.png) no-repeat;
 }
 .header h1 a .label {
   display: none;
@@ -344,7 +344,7 @@ a:visited {
   transition: top 550ms ease-in-out;
 }
 .navigation > ul > li > a {
-  font-family: 'DinCondensedRegular', 'Trebuchet MS', 'Garamond';
+  font-family: 'Helvetica';
   display: -moz-inline-stack;
   display: inline-block;
   *display: inline;
@@ -603,7 +603,7 @@ a:visited {
   margin-bottom: 1ex;
 }
 .hotspot > .content > .links > li > a {
-  font-family: 'DinCondensedRegular', 'Trebuchet MS', 'Garamond';
+  font-family: 'Helvetica';
   text-transform: uppercase;
   line-height: 1.25;
   font-size: 18px;
@@ -656,7 +656,7 @@ a:visited {
 /* @end */
 /* @group Twitter Balloon */
 blockquote.twitter {
-  font-family: 'DinCondensedRegular', 'Trebuchet MS', 'Garamond';
+  font-family: 'Helvetica';
   width: 220px;
   height: 220px;
   display: none;
@@ -808,7 +808,7 @@ html.panorama ul > li a {
   *display: inline;
   zoom: 1;
   vertical-align: top;
-  font-family: 'DinCondensedRegular', 'Trebuchet MS', 'Garamond';
+  font-family: 'Helvetica';
   font-size: 18px;
   margin-top: 20px;
   padding-bottom: 0px;
@@ -831,7 +831,7 @@ html.impressum body h2 {
   margin-top: 60px;
   margin-bottom: 10px;
   font-size: 32px;
-  font-family: 'DinCondensedRegular', 'Trebuchet MS', 'Garamond';
+  font-family: 'Helvetica';
 }
 html.impressum body .overview {
   padding-top: 50px;
@@ -878,7 +878,7 @@ html.impressum body .awards .source, html.impressum body .awards .date, html.imp
   margin-bottom: 0.25em;
 }
 html.impressum body .awards .source {
-  font-family: 'DinCondensedRegular', 'Trebuchet MS', 'Garamond';
+  font-family: 'Helvetica';
 }
 html.impressum body .awards .title {
   display: block;
