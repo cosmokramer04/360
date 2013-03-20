@@ -130,7 +130,7 @@
 
 			// video handling
 
-			var imageSeqLoader = new ProgressiveImageSequence( "../shared/street/vid-{index}.jpg" , 100 , {
+			var imageSeqLoader = new ProgressiveImageSequence( "shared/street/vid-{index}.jpg" , 100 , {
 				indexSize: 4,
 				initialStep: 16,
 				onProgress: handleLoadProgress,
@@ -168,8 +168,6 @@
 					}
 				}
 			}
-
-
 
 			$('body').append('<div id="loading-bar" style="position:fixed; bottom:0; left:0; background-color: #DF0012; background-color: rgba(223,0,18,0.5); height: 1px;"></div>');
 			
