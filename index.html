@@ -1,31 +1,64 @@
+
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<title>360</title>
-	<link rel="stylesheet" href="css/street.css" type="text/css">
-</head>
-<body>
-<div id="main" style="height: 2500px;">
-	<div class="header">
-		<h1>Rü360</h1>
-	</div>
-	<div class="street-view">
-		<video autobuffer poster="shared/street/vid-0001.jpg">
-			<source src="shared/street.mp4" type="video/mp4">
-			<source src="shared/street.webm" type="video/webm">
-		</video>
-		</div>
-		<div class="hotspot" data-position="0" data-speed="1" style="left: 130px;">#1</div>
-		<div class="hotspot" data-position="0.3" data-speed="2" style="right: 130px;">#2</div>
-		<div class="hotspot" data-position="0.4" data-speed="1.5" style="left: 130px;">#3</div>
-		<div class="hotspot" data-position="0.7" data-speed="0.7" style="left: 130px;">#4</div>
-		<div class="hotspot" data-position="1" data-speed="3" style="right: 130px;">#5</div>
-</div>
 
-<script src="shared/js/jquery-1.6.js"></script>
-<script src="js/ProgressiveImageSequence.class.js"></script>
+	<title>Scroll Tutorial - #4</title>
+
+
+	
+	<link rel="stylesheet" href="shared/css/street.css" type="text/css">
+
+</head>
+
+<body>
+	
+	<div id="main" style="height: 2500px;">
+	
+		<div class="header">
+			<h1>Scroll Tutorial - #4</h1>
+		</div>
+		
+		
+		<div class="street-view">
+			<img src="shared/street/vid-0001.jpg">
+		</div>
+		
+
+
+		<div class="hotspot" data-position="0" data-speed="1" style="left: 130px;">
+			#1
+		</div>
+		
+		<div class="hotspot" data-position="0.3" data-speed="2" style="right: 130px;">
+			#2
+		</div>
+		
+		<div class="hotspot" data-position="0.4" data-speed="1.5" style="left: 130px;">
+			#3
+		</div>
+		
+		<div class="hotspot" data-position="0.7" data-speed="0.7" style="left: 130px;">
+			#4
+		</div>
+		
+		<div class="hotspot" data-position="1" data-speed="3" style="right: 130px;">
+			#5
+		</div>
+
+
+	</div>
+		
+		
+
+
+
+	<script src="../shared/js/jquery-1.6.js"></script>
+	<script src="js/ProgressiveImageSequence.class.js"></script>
+
+
 	<script>
 		$(document).ready(function(){
 			var $doc = $(document);
@@ -130,7 +163,7 @@
 
 			// video handling
 
-			var imageSeqLoader = new ProgressiveImageSequence( "shared/street/vid-{index}.jpg" , 100 , {
+			var imageSeqLoader = new ProgressiveImageSequence( "../shared/street/vid-{index}.jpg" , 100 , {
 				indexSize: 4,
 				initialStep: 16,
 				onProgress: handleLoadProgress,
@@ -169,6 +202,8 @@
 				}
 			}
 
+
+
 			$('body').append('<div id="loading-bar" style="position:fixed; bottom:0; left:0; background-color: #DF0012; background-color: rgba(223,0,18,0.5); height: 1px;"></div>');
 			
 			function handleLoadProgress() {
@@ -196,6 +231,13 @@
 
 
 	</script>
+
+
+
+
+
+
+
 
 </body>
 </html>
