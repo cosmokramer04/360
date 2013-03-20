@@ -332,14 +332,7 @@
 				<cite>2H ago via Twitter</cite>
 			</div></div>
 		</blockquote>
-
-
-
-
-
-
 	</div>
-
 
 	<audio id="ambi-audio" preload="auto" autobuffer autoplay loop>
 		<source src="../media/sound/ambi.mp3" />
@@ -356,7 +349,6 @@
 			var $win = $(window);
 			var isTouch = 'ontouchstart' in window;
 			var isChrome = navigator.userAgent.indexOf('Chrome') > 0;
-
 
 			// dimensions
 			var windowHeight, windowWidth;
@@ -385,7 +377,6 @@
 				var offset = $view.offset();
 				$view.css({position: 'fixed' , top: offset.top });
 			});
-
 
 			// handle anchor links
 			$('a[href^="#"]').click(function(event){
@@ -428,11 +419,7 @@
 				activateElement( $('.navigation') , targetPosition < 0.001 );
 			}
 
-
-
-
 			// rendering
-
 			var scrollActivateTimeout;
 
 			function renderTimeline( position ) {
@@ -582,7 +569,6 @@
 				}
 			}
 
-
 			// main render loop
 			window.requestAnimFrame = (function(){
 			  return  window.requestAnimationFrame       ||
@@ -606,7 +592,6 @@
 			animloop();
 
 			// video handling
-
 			var daySeqLoader = new ProgressiveImageSequence( "shared/street/day/xs/vid-{index}.jpg" , 1050 , {
 				indexSize: 4,
 				onProgress: handleLoadProgress,
@@ -782,7 +767,6 @@
 			}
 
 			// twitter magic
-
 			var $twitter = $('.twitter');
 			$twitter.hide();
 			twittersearch('rüttenscheid',$twitter.length,function(result){
@@ -795,7 +779,6 @@
 			});
 
 			// sound control
-
 			var soundMuted = false;
 			(function(){
 				var ambi = document.getElementById('ambi-audio');
@@ -833,7 +816,6 @@
 			},1000);
 
 			// touch override
-
 			if ( isTouch ) {
 
 				(function(){
@@ -910,11 +892,8 @@
 					d.addEventListener('touchstart', onTouchStart, false);
 //					d.getElementsByClassName('street-view')[0].addEventListener('touchstart', onTouchStart, false);
 				})();
-
 			}
-
 		});
-
 	</script>
 </body>
 </html>
