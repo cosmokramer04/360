@@ -110,7 +110,7 @@ function ProgressiveImageSequence( imgpath , count ,  options ) {
 	};
 	
 	this.loadIndex = function(index, complete) {
-		if ( index < 0 ||Â index >= myself.length ) return false;
+		if ( index < 0 || index >= myself.length ) return false;
 
 		if ( index != Math.floor(index) ) {
 			return false;
