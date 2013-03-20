@@ -9,7 +9,7 @@
 <body>
 <div id="main" style="height: 2500px;">
 	<div class="header">
-		<h1>Scroll Tutorial - #1</h1>
+		<h1>Rü360</h1>
 	</div>
 	<div class="street-view">
 		<video autobuffer poster="shared/street/vid-0001.jpg">
@@ -58,6 +58,7 @@
 		
 		function handleScroll() {
 			targetPosition = $win.scrollTop() / scrollHeight;
+			console.log(targetPosition);
 		}
 		
 		// main render loop
@@ -82,7 +83,6 @@
 
 		// rendering
 		function render( position ) {
-			// position the elements
 			var minY = -windowHeight, maxY = windowHeight;
 			$.each($hotspotElements,function(index,element){
 				var $hotspot = $(element);
@@ -97,7 +97,7 @@
 			});
 			renderVideo( position );
 		}
-		
+			
 		function resizeBackgroundImage(){
 			// get image container size
 			var scale = Math.max( windowHeight/streetImgHeight , windowWidth/streetImgWidth );
@@ -111,7 +111,7 @@
 		}
 		
 		// video handling
-		var imageSeqLoader = new ProgressiveImageSequence( "../shared/street/vid-{index}.jpg" , 100 , {
+		var imageSeqLoader = new ProgressiveImageSequence( "shared/street/vid-{index}.jpg" , 100 , {
 			indexSize: 4,
 			initialStep: 16,
 			onProgress: handleLoadProgress,
