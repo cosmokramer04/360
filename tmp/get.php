@@ -1,26 +1,20 @@
 <?
-
-
-
-
 $id = 1;
-for ($id = 1; $id <= 2000; ++$id) {
+for ($id = 1; $id <= 630; ++$id) {
 $len = strlen($id);
 if($len == 1) {
-	$add = "000";
-}
-if($len == 2) {
 	$add = "00";
 }
-if($len == 3) {
+if($len == 2) {
 	$add = "0";
 }
-if($len == 4) {
+if($len == 3) {
 	$add = "";
 }
+
 set_time_limit(0);
-$url = "http://360langstrasse.sf.tv/media/street/day/xs/vid-".$add.$id.".jpg";
-$fp = fopen (dirname(__FILE__) . '/shared/street/vid-'.$add.$id.'.jpg', 'w+');
+$url = "http://360langstrasse.sf.tv/media/street/night/l/vid-".$add.$id.".jpg";
+$fp = fopen (dirname(__FILE__) . '/shared/street/night/l/vid-'.$add.$id.'.jpg', 'w+');
 
     $ch = curl_init($url);
 

@@ -6,57 +6,402 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<title>Rü360</title>
 	<link rel="stylesheet" href="css/street.css" type="text/css">
+	<link rel="stylesheet" href="css/fonts.css" type="text/css">
+	<style>
+	#p1:hover > .content, #p1.active > .content {
+		width: 250px;
+		height: 250px;
+	}
+	#p2:hover > .content, #p2.active > .content {
+		width: 340px;
+		height: 340px;
+	}
+	#p3:hover > .content, #p4.active > .content {
+		width: 270px;
+		height: 270px;
+	}
+	#p4:hover > .content, #p4.active > .content {
+		width: 310px;
+		height: 310px;
+	}
+	#p5:hover > .content, #p5.active > .content {
+		width: 360px;
+		height: 360px;
+	}
+	#p6:hover > .content, #p6.active > .content {
+		width: 320px;
+		height: 320px;
+	}
+	#p7:hover > .content, #p7.active > .content {
+		width: 265px;
+		height: 265px;
+	}
+	#p8:hover > .content, #p8.active > .content {
+		width: 250px;
+		height: 250px;
+	}
+	#p9:hover > .content, #p9.active > .content {
+		width: 260px;
+		height: 260px;
+	}
+	#p10:hover > .content, #p10.active > .content {
+		width: 270px;
+		height: 270px;
+	}
+	#p11:hover > .content, #p11.active > .content {
+		width: 350px;
+		height: 350px;
+	}
+	#p12:hover > .content, #p12.active > .content {
+		width: 245px;
+		height: 245px;
+	}
+	#p13:hover > .content, #p13.active > .content {
+		width: 290px;
+		height: 290px;
+	}
+	</style>
+	<script src="js/modernizr.js"></script>
 </head>
 <body>
-	<div id="main" style="height: 2500px;">
+	<div id="main" style="height: 10000px;">
 		<div class="header">
-			<h1>Rü360</h1>
+			<h1><a href="http://360.paulante.com/"><span class="label">Rü360</span></a></h1>
+			<ul class="header-nav">
+				<li class="info">
+					<a href="impressum"><span>Infos</span></a>
+				</li>
+				<li class="mute" style="display: none;">
+					<!-- toggles can have two states: '' | 'active' -->
+					<span class="toggle" rel="sound">
+						<a class="on"><span>Ton ein</span></a>
+						<a class="off"><span>Ton aus</span></a>
+					</span>
+				</li>
+				<li class="night">
+					<span class="toggle" rel="mode">
+						<a class="on"><span>Tag</span></a>
+						<a class="off"><span>Nacht</span></a>
+					</span>
+				</li>
+			</ul>
+
 		</div>
-		<div class="street-view">
-			<img src="shared/street/vid-0001.jpg">
+
+		<div class="navigation">
+			<ul>
+				<li><a href="#p1">Point 1</a></li>
+				<li><a href="#p2">Point 2</a></li>
+				<li><a href="#p3">Point 3</a></li>
+				<li><a href="#p4">Point 4</a></li>
+				<li><a href="#p5">Point 5</a></li>
+				<li><a href="#p6">Point 6</a></li>
+				<li><a href="#p7">Point 7</a></li>
+				<li><a href="#p8">Point 8</a></li>
+				<li><a href="#p9">Point 9</a></li>
+				<li><a href="#p10">Point 10</a></li>
+				<li><a href="#p11">Point 11</a></li>
+				<li><a href="#p12">Point 12</a></li>
+				<li><a href="#p13">Point 13</a></li>
+			</ul>
 		</div>
-		<div class="hotspot" data-position="0" data-speed="1" style="left: 130px;">
-			#1
+
+		<div class="intro" data-day="0" data-night="0" data-speed="4.5" data-align="center">
+			<div class="content">
+				<img class="bubble-bg" src="images/bubbles/black-bl.png">
+				<h2>Rüttenscheid 360</h2>
+				<p>The path of the righteous man is beset on all sides by the iniquities of the selfish and the tyranny of evil men. Blessed is he who, in the name of charity and good will, shepherds the weak through the valley of darkness.</p>
+				<span class="hint scroll-down"><span class="label">Scrollen</span></span>
+			</div>
 		</div>
-		<div class="hotspot" data-position="0.3" data-speed="2" style="right: 130px;">
-			#2
+
+		<div class="street-view"><img src="shared/street/day/xs/vid-0001.jpg" alt="Langstrasse Video"></div>
+		
+				<div id="p1" class="hotspot left" data-day="14" data-night="16" data-speed="2.8">
+						<div class="content">
+				<img class="bubble-bg" src="images/bubbles/red-tl.png">
+				<h2>Point 1</h2>
+				<div class="description">
+				</div>
+				<ul class="links">
+										<li><a href="#"><span>Link 1</span></a></li>
+										<li><a href="#"><span>Link 2</span></a></li>
+									</ul>
+			</div>
 		</div>
-		<div class="hotspot" data-position="0.4" data-speed="1.5" style="left: 130px;">
-			#3
+				<div id="p2" class="hotspot right" data-day="16.8" data-night="17.2" data-speed="1.8">
+						<div class="content">
+				<img class="bubble-bg" src="images/bubbles/red-tr.png">
+				<h2>Point 2</h2>
+				<div class="description">
+				</div>
+				<ul class="links">
+										<li><a href="#"><span>Link 1</span></a></li>
+										<li><a href="#"><span>Link 2</span></a></li>
+									</ul>
+			</div>
 		</div>
-		<div class="hotspot" data-position="0.7" data-speed="0.7" style="left: 130px;">
-			#4
+				<div id="p3" class="hotspot left" data-day="19" data-night="18.5" data-speed="2">
+						<div class="content">
+				<img class="bubble-bg" src="images/bubbles/red-tl.png">
+				<h2>Point 3</h2>
+				<div class="description">
+				</div>
+				<ul class="links">
+										<li><a href="#"><span>Link 1</span></a></li>
+										<li><a href="#"><span>Link 2</span></a></li>
+									</ul>
+			</div>
 		</div>
-		<div class="hotspot" data-position="1" data-speed="3" style="right: 130px;">
-			#5
+				<div id="p4" class="hotspot right" data-day="21.15" data-night="21" data-speed="3">
+						<div class="content">
+				<img class="bubble-bg" src="images/bubbles/red-tr.png">
+				<h2>Point 4</h2>
+				<div class="description">
+				</div>
+				<ul class="links">
+										<li><a href="#"><span>Link 1</span></a></li>
+										<li><a href="#"><span>Link 2</span></a></li>
+									</ul>
+			</div>
 		</div>
+				<div id="p5" class="hotspot left" data-day="25.5" data-night="22.25" data-speed="2.2">
+						<div class="content">
+				<img class="bubble-bg" src="images/bubbles/red-tl.png">
+				<h2>Point 5</h2>
+				<div class="description">
+				</div>
+				<ul class="links">
+										<li><a href="#"><span>Link 1</span></a></li>
+										<li><a href="#"><span>Link 2</span></a></li>
+									</ul>
+			</div>
+		</div>
+				<div id="p6" class="hotspot right" data-day="28" data-night="24.25" data-speed="2.5">
+						<div class="content">
+				<img class="bubble-bg" src="images/bubbles/red-tr.png">
+				<h2>Point 6</h2>
+				<div class="description">
+				</div>
+				<ul class="links">
+										<li><a href="#"><span>Link 1</span></a></li>
+										<li><a href="#"><span>Link 2</span></a></li>
+									</ul>
+			</div>
+		</div>
+				<div id="p7" class="hotspot right" data-day="37" data-night="33.5" data-speed="2">
+						<div class="content">
+				<img class="bubble-bg" src="images/bubbles/red-tr.png">
+				<h2>Point 7</h2>
+				<div class="description">
+				</div>
+				<ul class="links">
+										<li><a href="#"><span>Link 1</span></a></li>
+										<li><a href="#"><span>Link 2</span></a></li>
+									</ul>
+			</div>
+		</div>
+				<div id="p8" class="hotspot right" data-day="45.2" data-night="45" data-speed="2">
+						<div class="content">
+				<img class="bubble-bg" src="images/bubbles/red-tr.png">
+				<h2>Point 8</h2>
+				<div class="description">
+				</div>
+				<ul class="links">
+										<li><a href="#"><span>Link 1</span></a></li>
+										<li><a href="#"><span>Link 2</span></a></li>
+									</ul>
+			</div>
+		</div>
+				<div id="p9" class="hotspot right" data-day="63.5" data-night="66.2" data-speed="2">
+						<div class="content">
+				<img class="bubble-bg" src="images/bubbles/red-tr.png">
+				<h2>Point 9</h2>
+				<div class="description">
+				</div>
+				<ul class="links">
+										<li><a href="#"><span>Link 1</span></a></li>
+										<li><a href="#"><span>Link 2</span></a></li>
+									</ul>
+			</div>
+		</div>
+				<div id="p10" class="hotspot right" data-day="78" data-night="73" data-speed="1.2">
+						<div class="content">
+				<img class="bubble-bg" src="images/bubbles/red-tr.png">
+				<h2>Point 10</h2>
+				<div class="description">
+				</div>
+				<ul class="links">
+										<li><a href="#"><span>Link 1</span></a></li>
+										<li><a href="#"><span>Link 2</span></a></li>
+									</ul>
+			</div>
+		</div>
+				<div id="p11" class="hotspot right" data-day="86.3" data-night="81" data-speed="2">
+						<div class="content">
+				<img class="bubble-bg" src="images/bubbles/red-tr.png">
+				<h2>Point 11</h2>
+				<div class="description">
+				</div>
+				<ul class="links">
+										<li><a href="#"><span>Link 1</span></a></li>
+										<li><a href="#"><span>Link 2</span></a></li>
+									</ul>
+			</div>
+		</div>
+				<div id="p11" class="hotspot left" data-day="87.5" data-night="87.5" data-speed="2.5">
+						<div class="content">
+				<img class="bubble-bg" src="images/bubbles/red-tl.png">
+				<h2>Point 12</h2>
+				<div class="description">
+				</div>
+				<ul class="links">
+										<li><a href="#"><span>Link 1</span></a></li>
+										<li><a href="#"><span>Link 2</span></a></li>
+									</ul>
+			</div>
+		</div>
+				<div id="p13" class="hotspot right" data-day="91.5" data-night="92.5" data-speed="2">
+						<div class="content">
+				<img class="bubble-bg" src="images/bubbles/red-tr.png">
+				<h2>Point 13</h2>
+				<div class="description">
+				</div>
+				<ul class="links">
+										<li><a href="#"><span>Link 1</span></a></li>
+										<li><a href="#"><span>Link 2</span></a></li>
+									</ul>
+			</div>
+		</div>
+
+		<blockquote class="twitter right" data-day="5" data-night="5" data-speed="2" style="right: 15%">
+			<div class="content"><div class="message">
+				<img class="bubble-bg" src="images/bubbles/black-bl.png">
+				<p>Tweet 1</p>
+				<cite>1H ago via Twitter</cite>
+			</div></div>
+		</blockquote>
+		
+
+		<blockquote class="twitter left" data-day="9" data-night="9" data-speed="1.5" style="left: 15%">
+			<div class="content"><div class="message">
+				<img class="bubble-bg" src="images/bubbles/black-bl.png">
+				<p>Tweet 2</p>
+				<cite>2H ago via Twitter</cite>
+			</div></div>
+		</blockquote>
+
+		<blockquote class="twitter left" data-day="30" data-night="30" data-speed="2.5" style="left: 15%">
+			<div class="content"><div class="message">
+				<img class="bubble-bg" src="images/bubbles/black-bl.png">
+				<p>Tweet 3</p>
+				<cite>2H ago via Twitter</cite>
+			</div></div>
+		</blockquote>
+
+		<blockquote class="twitter left" data-day="38" data-night="38" data-speed="1.5" style="left: 15%">
+			<div class="content"><div class="message">
+				<img class="bubble-bg" src="images/bubbles/black-bl.png">
+				<p>Tweet 4</p>
+				<cite>2H ago via Twitter</cite>
+			</div></div>
+		</blockquote>
+
+		<blockquote class="twitter left" data-day="50" data-night="50" data-speed="1.5" style="left: 15%">
+			<div class="content"><div class="message">
+				<img class="bubble-bg" src="images/bubbles/black-bl.png">
+				<p>Tweet 5</p>
+				<cite>2H ago via Twitter</cite>
+			</div></div>
+		</blockquote>
+
+		<blockquote class="twitter left" data-day="82" data-night="82" data-speed="1.5" style="left: 15%">
+			<div class="content"><div class="message">
+				<img class="bubble-bg" src="images/bubbles/black-bl.png">
+				<p>Tweet 6</p>
+				<cite>2H ago via Twitter</cite>
+			</div></div>
+		</blockquote>
+
+		<blockquote class="twitter left" data-day="96" data-night="96" data-speed="1.5" style="left: 15%">
+			<div class="content"><div class="message">
+				<img class="bubble-bg" src="images/bubbles/black-bl.png">
+				<p>Tweet 7</p>
+				<cite>2H ago via Twitter</cite>
+			</div></div>
+		</blockquote>
+
+
+
+
+
+
 	</div>
+
 
 	<audio id="ambi-audio" preload="auto" autobuffer autoplay loop>
 		<source src="../media/sound/ambi.mp3" />
 		<source src="../media/sound/ambi.ogg" />
 	</audio>
 
-	<script src="../shared/js/jquery-1.6.js"></script>
+	<script src="shared/js/jquery-1.6.js"></script>
 	<script src="js/ProgressiveImageSequence.class.js"></script>
+
 	<script>
 		$(document).ready(function(){
 			var $doc = $(document);
 			var $win = $(window);
+			var isTouch = 'ontouchstart' in window;
+			var isChrome = navigator.userAgent.indexOf('Chrome') > 0;
 
-			// dimensions - we want to cache them on window resize
+
+			// dimensions
 			var windowHeight, windowWidth;
 			var fullHeight, scrollHeight;
-			var streetImgWidth = 1024, streetImgHeight = 640;
+			var bgImgWidth = 512, bgImgHeight = 320;
 			calculateDimensions();
 
-			var currentPosition = -1, targetPosition = 0;
-			var $videoContainer = $('.street-view');
-			var video = $('.street-view > img')[0];
-			var $hotspotElements = $('[data-position]');
+			// states
+			var isNight = false;
+			var currentPosition = getScrollTop() / scrollHeight;
+			var targetPosition = currentPosition;
+
+			// collect timeline elements
+			var $videoImage = $('.street-view > img');
+			var $allNavAnchors = $('#main .navigation a');
+
+			var $timeElements = $('[data-day]');
+			var timeElements = [];
+			var hotspots = {};
+			$timeElements.each(function(){
+				var $view = $(this);
+				var id = $view.attr('id');
+				var elem = new TimeElement(this);
+				timeElements.push( elem );
+				if ( id ) hotspots[id] = elem;
+				var offset = $view.offset();
+				$view.css({position: 'fixed' , top: offset.top });
+			});
 
 
-			// handling resize and scroll events
+			// handle anchor links
+			$('a[href^="#"]').click(function(event){
+				event.preventDefault();
+				var target = $(this).attr('href').substr(1);
+				var hotspot = hotspots[target];
+				if ( hotspot ) {
+					var pos = hotspot.getPosition();
+					setScrollTop( pos * scrollHeight );
+				}
+			});
+
+			function setScrollTop(value) {
+				$win.scrollTop(value);
+			}
+			
+			function getScrollTop() {
+				return $win.scrollTop() || (document.documentElement && document.documentElement.scrollTop);
+			}
 			
 			function calculateDimensions() {
 				windowWidth = $win.width();
@@ -64,17 +409,177 @@
 				fullHeight = $('#main').height();
 				scrollHeight = fullHeight - windowHeight;
 			}
-			
+			function setTargetPosition( position , immediate ) {
+				targetPosition = position;
+				if ( immediate ) currentPosition = targetPosition;
+			}
 			function handleResize() {
 				calculateDimensions();
-				resizeBackgroundImage();
+				renderBackgroundImage();
+				renderTimeline( currentPosition );
+				renderNavigation();
 				handleScroll();
 			}
-			
 			function handleScroll() {
-				targetPosition = $win.scrollTop() / scrollHeight;
+				setTargetPosition( getScrollTop() / scrollHeight );
+				activateElement( $('.navigation') , targetPosition < 0.001 );
 			}
-			
+
+
+
+
+			// rendering
+
+			var scrollActivateTimeout;
+
+			function renderTimeline( position ) {
+				var minY = -500, maxY = windowHeight + 500;
+				// element position
+				$.each(timeElements,function(index,element){
+					var elemPosition = element.getPosition();
+					var elemY = windowHeight/2 + element.speed * (elemPosition-position) * scrollHeight;
+					var active = false;
+					if ( elemY < minY || elemY > maxY ) {
+						element.view.css({'visiblity':'none', top: '-1000px','webkitTransform':'none'});
+					} else {
+						element.view.css('visiblity','visible');
+						positionElement(element.view,null,elemY);
+						if ( elemY < windowHeight/2 ) {
+							var x = (windowHeight/2 - elemY)/100;
+							x = x*x * 20;
+							if ( element.view.hasClass('hotspot') ) {
+								if ( element.view.hasClass('right') ) {
+									element.view.css('margin-right',-x);
+								} else
+								if ( element.view.hasClass('left') ) {
+									element.view.css('margin-left',-x);
+								}
+							}
+						} else
+						if ( element.view.hasClass('hotspot') ) {
+							element.view.css({'margin-left':0,'margin-right':0});
+						}
+
+						if ( element.view.is('.twitter') ) {
+							var sinMargin = Math.sin(elemY/300)*100;
+							element.view.css({'margin-left':sinMargin,'margin-right':sinMargin});
+						}
+						active = Math.abs(windowHeight/2 - elemY) < Math.max(windowHeight/5,100);
+					}
+					if ( getElementActive(element.view) != active ) {
+						clearTimeout( element.scrollActivateTimeout );
+						setElementActive(element.view,active);
+						function doit() {
+							activateElement( element.view , active );
+						}
+						if ( active ) {
+							if (active) playSound(element.view.attr('id'));
+							element.scrollActivateTimeout = setTimeout( doit , 1000 );
+						} else {
+							doit();
+						}
+						activateElement( element.anchor , active );
+					}
+				});
+
+				// video
+				showImage( currentPosition );
+			}
+
+			function renderNavigation() {
+				var MINGAP = 30;
+				var $navigation = $('#main > .navigation');
+				var scrollThumbHeight = Math.max( 30 , (windowHeight/fullHeight)*windowHeight );
+				var availableHeight = windowHeight - scrollThumbHeight;
+				var all = [];
+				// put all hotspots in array and sort by position
+				$.each(hotspots,function(k,v){ all.push(v); });
+				all.sort(function(a,b){return a.getPosition()-b.getPosition();});
+				var y = 0;
+				$.each(all,function(index,element){
+					if ( !element.anchor ) return;
+					var $anchor = $(element.anchor);
+					var pos = element.getPosition();
+					y = Math.max( y + MINGAP , pos * availableHeight + scrollThumbHeight/2 );
+					$anchor.css('top',y);
+				});
+			}
+
+			function positionElement( elem , x , y ) {
+				if ( Modernizr.csstransforms ) {
+					var xpos = ( x === null ? $.data(elem,'x') : x ) || 0;
+					var ypos = ( y === null ? $.data(elem,'y') : y ) || 0;
+					$.data(elem,'x',xpos);
+					$.data(elem,'y',ypos);
+				}
+				
+				if ( $.browser.safari && !isTouch && !isChrome ) {
+					elem.css({top:-1000,webkitTransform:'translate3d('+(xpos)+'px,'+(ypos+1000)+'px,0px)'});
+				} else 
+				if ( Modernizr.csstransforms ) {
+					var transform = 'translate('+(xpos)+'px,'+(ypos+1000)+'px)';
+					elem.css({
+						top: -1000,
+						'-webkit-transform':transform,
+						'-moz-transform':transform,
+						'-o-transform':transform,
+						'-ms-transform':transform
+					});
+				} else
+				{
+					if ( x !== null ) {
+						elem.css('left',x);
+					}
+					if ( y !== null ) {
+						elem.css('top',y);
+					}
+				}
+			}
+			function activateElement( elem , active ) {
+				$.data( elem , 'active' , active );
+				active ? elem.addClass('active') : elem.removeClass('active');
+			}
+			function setElementActive( elem , active ) {
+				$.data( elem , 'active' , active );
+			}
+			function getElementActive( elem ) {
+				return $.data( elem , 'active' );
+			}
+
+			function renderBackgroundImage(){
+				// get image container size				
+				var scale = Math.max( windowHeight/bgImgHeight , windowWidth/bgImgWidth );
+				var width = scale * bgImgWidth , height = scale * bgImgHeight;
+				var left = (windowWidth-width)/2, top = (windowHeight-height)/2;
+				if ( ($.browser.safari || isTouch) && !isChrome ) {
+					var transform = 'translate3d('+[-bgImgWidth/2,-bgImgHeight/2,0].join('px,')+'px) scale3d('+scale+','+scale+',1) translate3d('+[windowWidth/2/scale,windowHeight/2/scale,0].join('px,')+')';
+					$videoImage
+						.width(bgImgWidth).height(bgImgHeight)
+						.css('-webkit-transform',transform)
+						  .css({'position':'fixed', top: 0, left: 0});
+				} else
+				if ( Modernizr.csstransforms ) {
+					console.log('Using 2D transforms');
+					var transform = 'translate('+[-bgImgWidth/2,-bgImgHeight/2].join('px,')+'px) scale('+scale+') translate('+[windowWidth/2/scale,windowHeight/2/scale].join('px,')+'px)';
+					$videoImage
+						.width(bgImgWidth).height(bgImgHeight)
+						.css({
+							'-webkit-transform':transform,
+							'-moz-transform':transform,
+							'-o-transform':transform,
+							'-ms-transform':transform
+						})
+						  .css({'position':'fixed', top: 0, left: 0});
+				} else {
+					$videoImage
+						  .width(width).height(height)
+						  .css('position','fixed')
+						  .css('left',left+'px')
+						  .css('top',top+'px');
+				}
+			}
+
+
 			// main render loop
 			window.requestAnimFrame = (function(){
 			  return  window.requestAnimationFrame       ||
@@ -87,70 +592,49 @@
 			          };
 			})();
 
-
 			function animloop(){
-				if ( Math.floor(currentPosition*5000) != Math.floor(targetPosition*5000) ) {
-					currentPosition += (targetPosition - currentPosition) / 5;
-					render(currentPosition);
-				}
 			  requestAnimFrame(animloop);
+				if ( Math.floor(currentPosition*5000) != Math.floor(targetPosition*5000) ) {
+					var deaccelerate = Math.max( Math.min( Math.abs(targetPosition-currentPosition)*5000 , 10 ) , 2 );
+					currentPosition += (targetPosition - currentPosition) / deaccelerate;
+					renderTimeline(currentPosition);
+				}
 			}
-
-			// rendering
-			function render( position ) {
-				// position the elements
-				var minY = -windowHeight, maxY = windowHeight;
-				$.each($hotspotElements,function(index,element){
-					var $hotspot = $(element);
-					var elemPosition = Number( $hotspot.attr('data-position') );
-					var elemSpeed = Number( $hotspot.attr('data-speed') );
-					var elemY = windowHeight/2 + elemSpeed * (elemPosition-position) * scrollHeight;
-					if ( elemY < minY || elemY > maxY ) {
-						$hotspot.css({'visiblity':'none', top: '-1000px','webkitTransform':'none'});
-					} else {
-						$hotspot.css({'visiblity':'visible', top: elemY, position: 'fixed'});
-					}
-				});
-
-				renderVideo( position );
-			}
-
-			function resizeBackgroundImage(){
-				// get image container size
-				var scale = Math.max( windowHeight/streetImgHeight , windowWidth/streetImgWidth );
-				var width = scale * streetImgWidth , height = scale * streetImgHeight;
-				var left = (windowWidth-width)/2, top = (windowHeight-height)/2;
-				$videoContainer
-						  .width(width).height(height)
-						  .css('position','fixed')
-						  .css('left',left+'px')
-						  .css('top',top+'px');
-			}
+			animloop();
 
 			// video handling
-			var imageSeqLoader = new ProgressiveImageSequence( "../shared/street/vid-{index}.jpg" , 1050 , {
+
+			var daySeqLoader = new ProgressiveImageSequence( "shared/street/day/xs/vid-{index}.jpg" , 1050 , {
 				indexSize: 4,
-				initialStep: 16,
 				onProgress: handleLoadProgress,
 				onComplete: handleLoadComplete,
-				stopAt: 1
+				stopAt: isSlowBrowser() ? (isTouch?4:8) : 1
 			} );
+			var imageSeqLoader = daySeqLoader;
 
 			var loadCounterForIE = 0; // there seems to be a problem with ie calling the callback several times
 			imageSeqLoader.loadPosition(currentPosition,function(){
 				loadCounterForIE++;
 				if ( loadCounterForIE == 1 ) {
-					renderVideo(currentPosition);
+					showImage(currentPosition);
 					imageSeqLoader.load();
 					imageSeqLoader.load();
 					imageSeqLoader.load();
 					imageSeqLoader.load();
 				}
 			});
-			
-			var currentSrc, currentIndex;
 
-			function renderVideo(position) {
+			var nightSeqLoader = new ProgressiveImageSequence( "shared/street/night/xs/vid-{index}.jpg" , 630 , {
+				indexSize: 3,
+				onProgress: handleLoadProgress,
+				onComplete: handleLoadComplete,
+				stopAt: isSlowBrowser() ? 4 : 1
+			} );
+
+			var currentSrc, currentIndex;
+			var highresTimeout;
+
+			function showImage(position) {
 				var index = Math.round( currentPosition * (imageSeqLoader.length-1) );
 				var img = imageSeqLoader.getNearest( index );
 				var nearestIndex = imageSeqLoader.nearestIndex;
@@ -160,14 +644,84 @@
 				if ( !!img ) {
 					src = img.src;
 					if ( src != currentSrc ) {
-						video.src = src;
+						$videoImage[0].src = src;
 						currentSrc = src;
 					}
 				}
+				clearTimeout(highresTimeout);
+				highresTimeout = setTimeout(function(){
+					if ( !!src ) {
+						$('#debug').text( nearestIndex + ' / ' + index + ' / ' + (Math.round( index / imageSeqLoader.length * 10000 ) / 100) );
+						var highSrc = src.split('/xs/').join('/l/');
+						loadHighres(highSrc);
+					}
+				},isSlowBrowser()?500:150);
 			}
 
+			window.switchStreetMode = function() {
+				switchToMode( isNight ? 'day' : 'night' );
+			};
+
+			window.switchToMode = function( mode ) {
+				$videoImage.fadeOut(function(){
+					var prevHotspot, nextHotspot;
+					var all = [];
+					// put all hotspots in array and sort by position
+					$.each(hotspots,function(k,v){ all.push(v); });
+					all.sort(function(a,b){return a.getPosition()-b.getPosition();});
+					$.each(all,function(k,v){
+						if ( v.getPosition() > currentPosition ) {
+							nextHotspot = v;
+							prevHotspot = all[k-1];
+							return false;
+						}
+					});
+					if ( nextHotspot == null ) {
+						prevHotspot = all[all.length-1];
+					}
+					var prevPos = prevHotspot ? prevHotspot.getPosition() : 0;
+					var nextPos = nextHotspot ? nextHotspot.getPosition() : 1;
+					var intermediatePosition = (currentPosition-prevPos) / (nextPos-prevPos);
+
+					// let's make the switch
+					isNight = mode == 'night';
+					$('.toggle[rel="mode"]')[ isNight ? 'addClass' : 'removeClass' ]('active');
+
+					prevPos = prevHotspot ? prevHotspot.getPosition() : 0;
+					nextPos = nextHotspot ? nextHotspot.getPosition() : 1;
+					targetPosition = currentPosition = intermediatePosition * (nextPos-prevPos) + prevPos;
+
+					imageSeqLoader.stop(); imageSeqLoader.reset();
+					imageSeqLoader = isNight ? nightSeqLoader : daySeqLoader;
+					var loadCounterForIE = 0; // there seems to be a problem with ie calling the callback several times
+					imageSeqLoader.loadPosition( currentPosition , function() {
+						loadCounterForIE++;
+						if ( loadCounterForIE == 1 ) {
+							setTimeout(function(){
+								imageSeqLoader.load();
+								imageSeqLoader.load();
+								imageSeqLoader.load();
+								imageSeqLoader.load();
+							},10);
+							$(window).scrollTop(targetPosition*scrollHeight);
+							renderNavigation();
+							renderTimeline( currentPosition );
+							showImage( currentPosition );
+							$videoImage.fadeIn();
+						}
+					});
+				});
+			};
+
+			var loadHighresCounter = 0;
+
+			function loadHighres(src) {
+				var videoImage = $videoImage[0];
+				videoImage.src = src;
+			}
+
+
 			$('body').append('<div id="loading-bar" style="position:fixed; bottom:0; left:0; background-color: #DF0012; background-color: rgba(223,0,18,0.5); height: 1px;"></div>');
-			
 			function handleLoadProgress() {
 				var progress = imageSeqLoader.getLoadProgress() * 100;
 				$('#loading-bar').css({width:progress+'%',opacity:1});
@@ -181,9 +735,183 @@
 			$win.scroll( handleScroll );
 
 			handleResize();
-			animloop();
+
+			// helper classes
+			$('.sound .toggle').click(function(event){
+				event.preventDefault();
+				var $toggle = $(this);
+				var isActive = $toggle.hasClass('active');
+				if ( isActive ) {
+					$toggle.removeClass('active');
+				} else {
+					$toggle.addClass('active');
+				}
+
+			});
+
+			$('.night a').click(function(event){
+				event.preventDefault();
+				switchStreetMode();
+			});
+
+			function TimeElement( view , options ) {
+				options = options || {};
+				var $view = $(view);
+				this.id = $view.attr('id');
+				this.view = $view;
+				this.anchor = $allNavAnchors.filter('[href="#'+$view.attr('id')+'"]');
+				this.anchor = this.anchor.closest('li');
+				this.getPosition = function() { return isNight? this.nightPosition : this.dayPosition; };
+				this.dayPosition = options.dayPosition || Number( $view.attr('data-day')/100 );
+				this.nightPosition = options.nightPosition || Number( $view.attr('data-night')/100 );
+				this.speed = options.speed || Number( $view.attr('data-speed') ) || 1;
+				this.align = options.align || $view.attr('data-align') || 'left';
+			}
+
+
+			function easeCos(t) {
+				return Math.cos( (x*Math.PI+Math.PI)+1 ) / 2;
+			}
+
+
+			function isSlowBrowser() {
+				return isTouch || ($.browser.msie && Number($.browser.version) <= 8) ? true : false;
+			}
+
+			// twitter magic
+
+			var $twitter = $('.twitter');
+			$twitter.hide();
+			twittersearch('langstrasse',$twitter.length,function(result){
+				$.each(result,function(index,value){
+					var $tweet = $( $twitter[index] );
+					$tweet.fadeIn();
+					$tweet.find('p').html( value.message + ' – ' + value.user );
+					$tweet.find('cite').text( value.since );
+				});
+			});
+
+			// sound control
+
+			var soundMuted = false;
+			(function(){
+				var ambi = document.getElementById('ambi-audio');
+				if ( ambi && ambi.play ) {
+					$('.mute').show();
+					$('.mute > .toggle').click(function(){
+						soundMuted = ambi.muted = !ambi.muted;
+						$(this)[ ambi.muted ? 'addClass' : 'removeClass' ]('active');
+						$(this).parent()[ ambi.muted ? 'addClass' : 'removeClass' ]('active');
+					});
+				}
+			})();
+
+			function playSound( name ) {
+				var snd = document.getElementById(name+'-audio');
+				if ( !soundMuted && snd && snd.play && Math.random() < 0.3 ) {
+					if ( snd.currentTime == 0 || snd.ended ) {
+						snd.volume = 0.4;
+						snd.currentTime = 0;
+						snd.play();
+					}
+				}
+			}
+			
+			function addSounds( sounds ) {
+				var $body = $('body');
+				$.each( sounds , function(i,name) {
+					var $audio = $('<audio id="'+name+'-audio" preload="auto" autobuffer><source src="../media/sound/'+name+'.mp3"><source src="../media/sound/'+name+'.ogg"></audio>').hide();
+					$body.append( $audio );
+				});
+			}
+			
+			setTimeout(function(){
+				addSounds(['host','zkft','kita','poli','hohl','zapo']);
+			},1000);
+
+			// touch override
+
+			if ( isTouch ) {
+
+				(function(){
+
+					$('#main').css('height',1);
+
+					var scrollPos = 0;
+					var MAXSCROLL = 10000;
+
+					var oldCalculateDimensions = calculateDimensions;
+					calculateDimensions = function() {
+						oldCalculateDimensions();
+						scrollHeight = MAXSCROLL - windowHeight;
+					};
+
+					var oldGetScrollTop = getScrollTop;
+					getScrollTop = function() {
+						return scrollPos;
+					};
+
+					var oldSetScrollTop = setScrollTop;
+					setScrollTop = function(value) {
+						scrollPos = value;
+						dispatchScroll();
+					};
+
+					function dispatchScroll() {
+						targetPosition = scrollPos / scrollHeight;
+					}
+
+					var d = document;
+					var touchMoved, touchDown, touchBeginPosition, isLinkTouch;
+
+					function onTouchStart(event) {
+						var isNavigation = $(event.target).filter('a');
+						if ( isNavigation.length ) {
+							isNavigation = isNavigation.parents('.navigation').length >= 1;
+							return;
+						}
+						if ( $(event.target).parents('a').length == 0 ) {
+							event.preventDefault();
+						}
+						touchDown = true;
+						var touch = event.touches[0];
+						touchX = touch.clientX;
+						touchY = touch.clientY;
+						touchBeginPosition = { x: touchX , y: touchY , scroll: scrollPos };
+						d.addEventListener('touchmove', onTouchMove, false);
+						d.addEventListener('touchend', onTouchEnd, false);
+					}
+					function onTouchMove(event) {
+					    event.preventDefault();
+						var touch = event.touches[0];
+						touchX = touch.clientX;
+						touchY = touch.clientY;
+						var dy = (touchY-touchBeginPosition.y);
+						if ( Math.abs(dy) > 3 ) {
+					    touchMoved = true;
+						}
+						scrollPos = touchBeginPosition.scroll - dy * 2;
+						scrollPos = Math.min( MAXSCROLL , Math.max( 0 , scrollPos ) );
+						dispatchScroll();
+					}
+					function onTouchEnd(event) {
+						if ( touchMoved ) {
+							event.preventDefault();
+						}
+
+						d.removeEventListener('touchmove', onTouchMove, false);
+						d.removeEventListener('touchend', onTouchEnd, false);
+						touchDown = false;
+					}
+					
+					d.addEventListener('touchstart', onTouchStart, false);
+//					d.getElementsByClassName('street-view')[0].addEventListener('touchstart', onTouchStart, false);
+				})();
+
+			}
 
 		});
+
 	</script>
 </body>
 </html>
