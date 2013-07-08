@@ -128,7 +128,7 @@
 				</div>
 				<ul class="links">
 										<li><a class="fancybox" href="http://vimeo.com/69465293">Video</a></li>
-										<li><a class="fancybox" href="https://maps.google.de/maps?q=zweibar,+essen&hl=de&ie=UTF8&ll=51.441664,7.003827&spn=0.004541,0.011362&sll=51.570941,6.915851&sspn=0.289782,0.727158&hq=zweibar,&hnear=Essen,+D%C3%BCsseldorf,+Nordrhein-Westfalen&t=m&z=17&iwloc=A">Map</a>
+										<li><a class="fancybox" href="https://maps.google.de/maps?q=zweibar,+essen&hl=de&ie=UTF8&ll=51.440146,7.006874&spn=0.004541,0.011362&sll=51.570941,6.915851&sspn=0.289782,0.727158&hq=zweibar,&hnear=Essen,+D%C3%BCsseldorf,+Nordrhein-Westfalen&t=m&z=17&iwloc=A">Map</a>
 									</ul>
 			</div>
 		</div>
@@ -392,7 +392,6 @@
 			});
 			
 			$('.fancybox').fancybox({
-          autoHeight: true,
           padding: 0,
           margin: 0,
           beforeShow: function() {
@@ -414,7 +413,10 @@
 	          hd: 1,
 	          show_title: 0,
 	          show_byline: 0
-          }
+          },
+          iframe: {
+           preload: false
+					}
       });
 			
 			function setScrollTop(value) {
