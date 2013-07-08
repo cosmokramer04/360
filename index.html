@@ -68,6 +68,12 @@
 	
 	<script type="text/javascript" src="js/jquery.fancybox.pack.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css" media="screen" />
+	
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('.fancybox-media').fancybox();
+		});
+	</script>
 </head>
 <body>
 	<div id="main" style="height: 10000px;">
@@ -132,6 +138,7 @@
 				<ul class="links">
 										<li><a href="#"><span>Link 1</span></a></li>
 										<li><a href="#"><span>Link 2</span></a></li>
+										<li><a class="fancybox-media" href="http://vimeo.com/47480346">Vimeo</a></li>
 									</ul>
 			</div>
 		</div>
