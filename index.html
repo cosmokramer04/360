@@ -129,7 +129,7 @@
 				<ul class="links">
 										<li><a href="#"><span>Link 1</span></a></li>
 										<li><a href="#"><span>Link 2</span></a></li>
-										<li><a class="fancybox-media" href="http://vimeo.com/47480346">Vimeo</a></li>
+										<li><a class="fancybox" href="http://vimeo.com/69465293">Video</a></li>
 									</ul>
 			</div>
 		</div>
@@ -392,7 +392,18 @@
 				}
 			});
 			
-			$('.fancybox').fancybox();
+			$('.fancybox').fancybox({
+          autoSize: true,
+          helpers: {
+              media: true
+          },
+          vimeo: {
+	          autoplay: 1,
+	          hd: 1,
+	          show_title: 0,
+	          show_byline: 0
+          }
+      });
 			
 			function setScrollTop(value) {
 				$win.scrollTop(value);
@@ -742,6 +753,20 @@
 
 			});
 
+			function s() {
+				$('.sound .toggle').click(function(event){
+					event.preventDefault();
+					var $toggle = $(this);
+					var isActive = $toggle.hasClass('active');
+					if ( isActive ) {
+						$toggle.removeClass('active');
+					} else {
+						$toggle.addClass('active');
+					}
+	
+				});				
+			}
+			
 			$('.night a').click(function(event){
 				event.preventDefault();
 				switchStreetMode();
