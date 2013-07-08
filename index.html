@@ -393,7 +393,15 @@
 			});
 			
 			$('.fancybox').fancybox({
-          autoSize: true,
+          autoHeight: true,
+          padding: 0,
+          margin: 0,
+          beforeShow: function() {
+				    $('#ambi-audio')[0].muted = true;
+				  },
+				  afterClose: function() {
+				  	$('#ambi-audio')[0].muted = false;
+				  },
           helpers: {
               media: true
           },
@@ -752,20 +760,6 @@
 				}
 
 			});
-
-			function s() {
-				$('.sound .toggle').click(function(event){
-					event.preventDefault();
-					var $toggle = $(this);
-					var isActive = $toggle.hasClass('active');
-					if ( isActive ) {
-						$toggle.removeClass('active');
-					} else {
-						$toggle.addClass('active');
-					}
-	
-				});				
-			}
 			
 			$('.night a').click(function(event){
 				event.preventDefault();
