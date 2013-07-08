@@ -93,7 +93,7 @@
 
 		<div class="navigation">
 			<ul>
-				<li><a href="#p1">Point 1</a></li>
+				<li><a href="#p1">Zweibar</a></li>
 				<li><a href="#p2">Point 2</a></li>
 				<li><a href="#p3">Point 3</a></li>
 				<li><a href="#p4">Point 4</a></li>
@@ -123,12 +123,13 @@
 				<div id="p1" class="hotspot left" data-day="14" data-night="16" data-speed="2.8">
 						<div class="content">
 				<img class="bubble-bg" src="images/bubbles/red-tl.png">
-				<h2>Point 1</h2>
+				<h2>Zweibar</h2>
 				<div class="description">
 				</div>
 				<ul class="links">
-										<li><a class="video" href="http://vimeo.com/69465293">Video</a></li>
-										<li><a class="fancybox" href="https://maps.google.de/maps?q=zweibar,+essen&hl=de&ie=UTF8&ll=51.440146,7.006874&spn=0.004541,0.011362&sll=51.570941,6.915851&sspn=0.289782,0.727158&hq=zweibar,&hnear=Essen,+D%C3%BCsseldorf,+Nordrhein-Westfalen&t=m&z=17&iwloc=A">Map</a>
+										<li><a class="video" href="http://vimeo.com/69465293"><span>Video</span></a></li>
+										<li><a class="fancybox" href="https://maps.google.de/maps?q=zweibar,+essen&hl=de&ie=UTF8&ll=51.440146,7.006874&spn=0.004541,0.011362&sll=51.570941,6.915851&sspn=0.289782,0.727158&hq=zweibar,&hnear=Essen,+D%C3%BCsseldorf,+Nordrhein-Westfalen&t=m&z=17&iwloc=A"><span>Map</span></a></li>
+										<li><a href="https://www.facebook.com/ProjektZweibar" target="_blank">Facebook</a></li>
 									</ul>
 			</div>
 		</div>
@@ -139,7 +140,7 @@
 				<div class="description">
 				</div>
 				<ul class="links">
-										<li><a href="#"><span>Link 1</span></a></li>
+										<li><a class="video" href="http://vimeo.com/16216482"><span>Video</span></a></li>
 										<li><a href="#"><span>Link 2</span></a></li>
 									</ul>
 			</div>
@@ -393,9 +394,18 @@
 			
 			$('.video').fancybox({
           padding: 0,
-          margin: 0,
           beforeShow: function() {
 				    $('#ambi-audio')[0].muted = true;
+						if (this.title) {
+                // New line
+                this.title += '<br />';
+                
+                // Add tweet button
+                this.title += '<a href="https://twitter.com/share" class="twitter-share-button" data-count="none" data-url="' + this.href + '">Tweet</a> ';
+                
+                // Add FaceBook like button
+                this.title += '<iframe src="//www.facebook.com/plugins/like.php?href=' + this.href + '&amp;layout=button_count&amp;show_faces=true&amp;width=500&amp;action=like&amp;font&amp;colorscheme=light&amp;height=23" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:110px; height:23px;" allowTransparency="true"></iframe>';
+            }
 				  },
 				  afterClose: function() {
 				  	$('#ambi-audio')[0].muted = false;
@@ -411,14 +421,13 @@
           vimeo: {
 	          autoplay: 1,
 	          hd: 1,
-	          show_title: 0,
+	          show_title: 1,
 	          show_byline: 0
           }
       });
       
 			$('.fancybox').fancybox({
           padding: 0,
-          margin: 0,
           helpers: {
               media: true,
               overlay: {
@@ -426,12 +435,6 @@
                 	'background': 'rgba(10, 10, 10, 0.85)'
 								}
 							}
-          },
-          vimeo: {
-	          autoplay: 1,
-	          hd: 1,
-	          show_title: 0,
-	          show_byline: 0
           },
           iframe: {
            preload: false
