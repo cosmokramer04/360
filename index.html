@@ -9,6 +9,7 @@
 	<title>R&uuml;360</title>
 	<link rel="stylesheet" href="css/street.css" type="text/css">
 	<link rel="stylesheet" href="css/fonts.css" type="text/css">
+	<link rel="stylesheet" href="css/jquery.fancybox.css" type="text/css" media="screen" />
 	<style>
 	#p1:hover > .content, #p1.active > .content {
 		width: 250px;
@@ -63,17 +64,7 @@
 		height: 250px;
 	}
 	</style>
-	<script type="text/javascript" src="js/jquery.js"></script>
 	<script type="text/javascript" src="js/modernizr.js"></script>
-	
-	<script type="text/javascript" src="js/jquery.fancybox.pack.js"></script>
-	<link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css" media="screen" />
-	
-	<script type="text/javascript">
-		$(document).ready(function() {
-			$('.fancybox-media').fancybox();
-		});
-	</script>
 </head>
 <body>
 	<div id="main" style="height: 10000px;">
@@ -353,9 +344,10 @@
 	<script src="shared/js/jquery-1.7.1.min.js"></script>
 	<script src="js/ProgressiveImageSequence.class.js"></script>
 	<script src="js/mine/twittersearch.js"></script>
-
+	<script type="text/javascript" src="js/jquery.fancybox.pack.js"></script>
+	<script type="text/javascript" src="js/jquery.fancybox-media.js"></script>
 	<script>
-		$(document).ready(function(){
+		$(document).ready(function(){		
 			var $doc = $(document);
 			var $win = $(window);
 			var isTouch = 'ontouchstart' in window;
@@ -399,7 +391,9 @@
 					setScrollTop( pos * scrollHeight );
 				}
 			});
-
+			
+			$('.fancybox').fancybox();
+			
 			function setScrollTop(value) {
 				$win.scrollTop(value);
 			}
