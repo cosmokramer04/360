@@ -129,7 +129,7 @@
 				<ul class="links">
 										<li><a class="video" href="http://vimeo.com/69465293"><span>Video</span></a></li>
 										<li><a class="fancybox" href="https://maps.google.de/maps?q=zweibar,+essen&hl=de&ie=UTF8&ll=51.440146,7.006874&spn=0.004541,0.011362&sll=51.570941,6.915851&sspn=0.289782,0.727158&hq=zweibar,&hnear=Essen,+D%C3%BCsseldorf,+Nordrhein-Westfalen&t=m&z=17&iwloc=A"><span>Map</span></a></li>
-										<li><a href="https://www.facebook.com/ProjektZweibar" target="_blank">Facebook</a></li>
+										<li><a id="gal-zweibar" href="javascript:;"><span>Gallery</span></a></li>
 									</ul>
 			</div>
 		</div>
@@ -440,6 +440,36 @@
            preload: false
 					}
       });
+      
+      $("#gal-zweibar").click(function() {
+				$.fancybox.open([
+					{
+						href : 'images/locations/zweibar/1.jpg',
+						title : 'Projekt Zweibar'
+					}, {
+						href : 'images/locations/zweibar/2.jpg',
+						title : 'Projekt Zweibar'
+					}, {
+						href : 'images/locations/zweibar/3.jpg',
+						title : 'Projekt Zweibar'
+					}, {
+						href : 'images/locations/zweibar/4.jpg',
+						title : 'Projekt Zweibar'
+					}, {
+						href : 'images/locations/zweibar/5.jpg',
+						title : 'Projekt Zweibar'
+					}, {
+						href : 'images/locations/zweibar/6.jpg',
+						title : 'Projekt Zweibar'
+					}, {
+						helpers: {
+							title : {
+								type : 'over' // 'float', 'inside', 'outside' or 'over'
+							}
+						}
+					}
+				]);
+			});
 			
 			function setScrollTop(value) {
 				$win.scrollTop(value);
