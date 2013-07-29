@@ -225,9 +225,9 @@ a:visited {
 }
 .header h1 a {
   display: block;
-  width: 269px;
-  height: 269px;
-  background: url(../images/shared/ru-logo-small-alt.png) no-repeat;
+  width: 207px;
+  height: 207px;
+  background: url(../images/shared/ru-logo-small-alt-33.png) no-repeat;
 }
 .header h1 a .label {
   display: none;
