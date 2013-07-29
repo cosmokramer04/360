@@ -941,3 +941,21 @@ html.impressum body .like {
   height: 100%;
   pointer-events: none;
 }
+
+#wsdh {
+	width: 600px;
+	height: 400px;
+	padding: 10px;
+}
+#wsdh p, #wsdh h2 {
+	color: #000;
+}
+#wsdh h2 {
+	font-size: 18px;
+	margin-bottom: 15px;
+	text-transform: uppercase;
+}
+#wsdh p {
+	font-size: 12px;
+	line-height: 18px;
+}
